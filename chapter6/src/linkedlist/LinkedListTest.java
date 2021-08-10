@@ -31,4 +31,17 @@ class LinkedListTest {
     assertEquals(13, l.remove());
     assertEquals(15, l.remove());
   }
+
+  @Test
+  void iteratorTest(){
+    LinkedList l = new LinkedList();
+    l.add(13);
+    l.add(15);
+    Iterator it = l.iterator();
+    assertTrue(it.hasNext());
+    assertEquals(13, it.next());
+    assertTrue(it.hasNext());
+    assertEquals(15, it.next());
+    assertFalse(it.hasNext());
+  }
 }

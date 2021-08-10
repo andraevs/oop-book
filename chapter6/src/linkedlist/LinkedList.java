@@ -1,10 +1,8 @@
 package linkedlist;
 
-import org.w3c.dom.Node;
-
 import java.util.NoSuchElementException;
 
-public class LinkedList {
+public class LinkedList implements Collection{
   private Node first;
 
   public void add(int val) {
@@ -34,6 +32,11 @@ public class LinkedList {
       }
   }
 
+  @Override
+  public Iterator iterator() {
+    return new ListIterator();
+  }
+
   private static class Node{
     Node next;
     int value;
@@ -43,5 +46,27 @@ public class LinkedList {
     }
   }
 
+  private class ListIterator implements Iterator{
+
+    private Node current;
+    // when created iterator points to the first node
+    ListIterator(){
+      current = first;
+    }
+
+    @Override
+    public boolean hasNext() {
+      // false for last element
+      return current != null;
+    }
+
+    @Override
+    public int next() {
+      // get value for current node and pass to the next node in the list
+      int val = current.value;
+      current = current.next;
+      return val;
+    }
+  }
 
 }
