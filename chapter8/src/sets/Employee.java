@@ -35,6 +35,18 @@ public class Employee implements Comparable<Employee>{
         return "Employee{" + "name='" + name + '\'' + ", salary=" + salary + ", hireDate=" + hireDate + '}';
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+
     @Override
     public int compareTo(Employee o) {
         Employee employee = (Employee) o;
