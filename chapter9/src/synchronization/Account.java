@@ -9,10 +9,10 @@ public class Account {
     this.amount = amount;
   }
 
-  public  void deposit(int sum){
+  public  synchronized void deposit(int sum){
     amount+=sum;
   }
-  public  void withdraw(int sum){
+  public  synchronized void withdraw(int sum){
     amount-=sum;
   }
 
