@@ -14084,7 +14084,7 @@
 											"top": 188,
 											"width": 64.32080078125,
 											"height": 13,
-											"text": "Queue"
+											"text": "Queue<E>"
 										},
 										{
 											"_type": "LabelView",
@@ -14263,7 +14263,7 @@
 											"top": 188,
 											"width": 64.32080078125,
 											"height": 13,
-											"text": "Deque"
+											"text": "Deque<E>"
 										},
 										{
 											"_type": "LabelView",
@@ -15921,7 +15921,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF79DvGyTpeyiA="
 					},
-					"name": "Queue",
+					"name": "Queue<E>",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -15945,7 +15945,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF79DvGyTpeyiA="
 					},
-					"name": "Deque",
+					"name": "Deque<E>",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
