@@ -56,3 +56,6 @@ This is the code for the book "Design Based Object Oriented Programming" written
   - Application architecture
   - Sample project
   - Domain modelling
+- Chapter 12 Functional programming in Java
+  - Optional
+  - Streams
