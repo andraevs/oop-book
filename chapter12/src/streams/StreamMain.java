@@ -1,5 +1,6 @@
 package streams;
 
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.function.Predicate;
@@ -30,6 +31,17 @@ public class StreamMain {
         System.out.println(set2);
         Set<Integer> set3 = stream.collect(Collectors.toSet());
         System.out.println(set3);
+        List<String> emptyList = List.of();
+        List<String> listOne = List.of("one", "two");
+        List<String> listTwo = List.of("three", "four");
+        Stream<List<String>> streamOfLists = Stream.of(emptyList, listOne, listTwo);
+        streamOfLists.flatMap(l -> l.stream())
+                .forEach(System.out::println);
+        Stream.of("mary","john","andrew","jane")
+                .sorted().forEach(System.out::println);
+        int count=Stream.of("mary","john","andrew","jane")
+                .peek(System.out::println).collect(Collectors.toList()).size();
+        System.out.println(count);
 
     }
 }
